@@ -1,0 +1,146 @@
+.about-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f9fafb, #eef2ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #374151;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 750px;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-text:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.about-text:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+/* Highlights */
+.highlight {
+  font-weight: 600;
+}
+
+.highlight.color {
+  color: #3b82f6;
+}
+
+.highlight.gradient {
+  color: #ec4899;
+}
+
+.highlight.shade {
+  color: #10b981;
+}
+
+/* 🌈 Features Section */
+.features-section {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.features-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+}
+
+.feature-icon {
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Button */
+.about-btn {
+  margin-top: 3rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+}
+
+.about-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

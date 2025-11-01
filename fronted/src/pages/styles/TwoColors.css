@@ -1,0 +1,87 @@
+.two-colors-container {
+  padding: 2rem;
+  background: #f9fafb;
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.two-colors-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 2rem;
+}
+
+.two-colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.two-colors-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.two-colors-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.two-colors-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.two-colors-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.two-colors-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.shade-box {
+  width: 120px;
+  height: 100px;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shade-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shade-label {
+  user-select: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 📱 Responsive stacking */
+@media (max-width: 640px) {
+  .two-colors-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

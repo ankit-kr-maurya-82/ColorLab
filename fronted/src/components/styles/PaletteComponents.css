@@ -1,0 +1,77 @@
+.palette-container {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.palette-head {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4f46e5;
+  margin-bottom: 3rem;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.palette-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palette-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.palette-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.palette-shades {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.shade {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.shade:hover {
+  transform: scale(1.1);
+}
+
+.shade-label {
+  font-size: 0.65rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.shade:hover .shade-label {
+  opacity: 1;
+}

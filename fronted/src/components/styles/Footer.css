@@ -1,0 +1,126 @@
+.footer-container {
+  background: linear-gradient(to right, #f9fafb, #eef2ff);
+  color: #4b5563;
+  padding: 3rem 1.5rem 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* Left - Brand Info */
+.footer-brand {
+  flex: 1;
+  min-width: 240px;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.brand-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Center - Links */
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-heading {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #2563eb;
+}
+
+/* Right - Social Icons */
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-icons a {
+  color: #4b5563;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2563eb;
+  transform: scale(1.15);
+}
+
+/* Bottom Section */
+.footer-bottom {
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.footer-creator {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  color: #9ca3af;
+}
+
+.brand {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.author {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

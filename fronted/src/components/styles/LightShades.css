@@ -1,0 +1,93 @@
+.lightshades-container {
+  padding: 2rem;
+  background: #fefefe;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lightshades-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+/* Scrollable Grid */
+.lightshades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.lightshades-grid::-webkit-scrollbar {
+  width: 8px;
+}
+.lightshades-grid::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 8px;
+}
+
+/* Palette Card */
+.lightshades-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.lightshades-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 0.8rem;
+}
+
+/* Shades Row */
+.lightshades-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.4rem;
+  max-height: 240px;
+  overflow-y: auto;
+  border-radius: 0.75rem;
+}
+
+.lightshades-row::-webkit-scrollbar {
+  height: 6px;
+}
+.lightshades-row::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+/* Shade Box */
+.shade-box {
+  height: 80px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shade-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shade-label {
+  user-select: none;
+  text-align: center;
+}
