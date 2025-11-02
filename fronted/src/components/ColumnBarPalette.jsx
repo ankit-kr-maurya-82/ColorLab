@@ -9,17 +9,17 @@ export default function ColumnBarPalette() {
   { name: "Slate", base: "#0F172A" },   // dark slate
   { name: "Red", base: "#7F1D1D" },     // dark red
   { name: "Orange", base: "#9A3412" },  // dark orange
-  { name: "Amber", base: "#92400E" },   // dark amber
-  { name: "Yellow", base: "#854D0E" },  // deep golden yellow
-  { name: "Lime", base: "#365314" },    // dark lime green
-  { name: "Green", base: "#065F46" },   // dark emerald
-  { name: "Teal", base: "#115E59" },    // dark teal
-  { name: "Cyan", base: "#164E63" },    // dark cyan
+  // { name: "Amber", base: "#92400E" },   // dark amber
+  // { name: "Yellow", base: "#854D0E" },  // deep golden yellow
+  // { name: "Lime", base: "#365314" },    // dark lime green
+  // { name: "Green", base: "#065F46" },   // dark emerald
+  // { name: "Teal", base: "#115E59" },    // dark teal
+  // { name: "Cyan", base: "#164E63" },    // dark cyan
   { name: "Blue", base: "#1E3A8A" },    // dark blue
-  { name: "Indigo", base: "#312E81" },  // dark indigo
+  // { name: "Indigo", base: "#312E81" },  // dark indigo
   { name: "Purple", base: "#5B21B6" },  // dark purple
-  { name: "Pink", base: "#9D174D" },    // dark pink
-  { name: "Rose", base: "#881337" },    // dark rose
+  // { name: "Pink", base: "#9D174D" },    // dark pink
+  // { name: "Rose", base: "#881337" },    // dark rose
   { name: "Brown", base: "#4E342E" }    // dark brown
 ];
 

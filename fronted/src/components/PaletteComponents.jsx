@@ -55,7 +55,7 @@ export default function PaletteComponents() {
     <>
       <section className="palette-container">
         <Link to="/shades/light">
-        <h1 className="palette-head">🎨 Light Color Shade Palettes</h1>
+          <h1 className="palette-head">🎨 Light Color Shade Palettes</h1>
         </Link>
 
         <div className="palette-grid">
@@ -70,10 +70,7 @@ export default function PaletteComponents() {
                     style={{ backgroundColor: color }}
                     onClick={() => copyColor(color)}
                   >
-                    <span
-                      className="shade-label"
-                      style={{ mixBlendMode: "difference" }}
-                    >
+                    <span className="shade-label">
                       {copied === color ? "Copied!" : color}
                     </span>
                   </div>

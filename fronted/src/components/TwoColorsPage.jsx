@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./styles/TwoColors.css";
+import "./styles/TwoColorsPage.css";
 
-export default function TwoColors() {
+const TwoColorsPage = () => {
   const [copied, setCopied] = useState(null);
 
   const hexToRgb = (hex) => {
@@ -39,18 +39,28 @@ export default function TwoColors() {
     setTimeout(() => setCopied(null), 1000);
   };
 
-  // 🌈 Added more color pairs
   const colorPairs = [
-    { name: "Black & Blue", first: "#000000", second: "#1E3A8A" },
+        { name: "Black & Blue", first: "#000000", second: "#1E3A8A" },
     { name: "Gray & Teal", first: "#374151", second: "#0D9488" },
     { name: "Red & Orange", first: "#7F1D1D", second: "#EA580C" },
     { name: "Purple & Pink", first: "#5B21B6", second: "#DB2777" },
     { name: "Green & Lime", first: "#166534", second: "#84CC16" },
     { name: "Cyan & Indigo", first: "#0891B2", second: "#3730A3" },
-    // { name: "Amber & Rose", first: "#92400E", second: "#BE123C" },
-    // { name: "Brown & Yellow", first: "#4E342E", second: "#EAB308" },
-    // { name: "Slate & Violet", first: "#334155", second: "#8B5CF6" },
-    // { name: "Emerald & Sky", first: "#047857", second: "#0284C7" },
+    { name: "Amber & Rose", first: "#92400E", second: "#BE123C" },
+    { name: "Brown & Yellow", first: "#4E342E", second: "#EAB308" },
+    { name: "Slate & Violet", first: "#334155", second: "#8B5CF6" },
+    { name: "Emerald & Sky", first: "#047857", second: "#0284C7" },
+    { name: "Sea & Sand", first: "#0EA5E9", second: "#FBBF24" },
+    { name: "Sunset & Peach", first: "#F97316", second: "#FCA5A5" },
+    { name: "Lavender & Mint", first: "#A78BFA", second: "#99F6E4" },
+    { name: "Rose & Gold", first: "#F43F5E", second: "#FACC15" },
+    { name: "Sky & Coral", first: "#38BDF8", second: "#FB7185" },
+    { name: "Forest & Moss", first: "#14532D", second: "#65A30D" },
+    { name: "Navy & Cream", first: "#1E3A8A", second: "#FEF3C7" },
+    { name: "Chocolate & Caramel", first: "#3E2723", second: "#D97706" },
+    { name: "Plum & Silver", first: "#581C87", second: "#D1D5DB" },
+    { name: "Denim & Cyan", first: "#1E40AF", second: "#06B6D4" },
+
   ];
 
   return (
@@ -61,8 +71,9 @@ export default function TwoColors() {
         {colorPairs.map((pair, idx) => (
           <div key={idx} className="two-colors-card">
             <h2 className="two-colors-name">{pair.name}</h2>
+
             <div className="two-colors-row">
-              {/* Left color column */}
+              {/* First Color Column */}
               <div className="two-colors-column">
                 {generateScale(pair.first, 3).map((color, i) => (
                   <div
@@ -78,7 +89,7 @@ export default function TwoColors() {
                 ))}
               </div>
 
-              {/* Right color column */}
+              {/* Second Color Column */}
               <div className="two-colors-column">
                 {generateScale(pair.second, 3).map((color, i) => (
                   <div
@@ -99,4 +110,6 @@ export default function TwoColors() {
       </div>
     </section>
   );
-}
+};
+
+export default TwoColorsPage;

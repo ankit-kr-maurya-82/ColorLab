@@ -39,13 +39,13 @@ export default function Navbar() {
                 Light Shades
               </Link>
               <Link
-                to="/shades/two-color"
+                to="/shades/two-colors"
                 className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
               >
                 Two-Color Shades
               </Link>
               <Link
-                to="/shades/multi"
+                to="/shades/multi-shades"
                 className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
               >
                 Multi Shades

@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Price from "./pages/price";
 import DarkShades from "./components/DarkShades";
 import LightShades from "./components/LightShades";
+import TwoColorsPage from "./components/TwoColorsPage";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -24,7 +26,9 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/shades/dark" element={<DarkShades />} />
             <Route path="/shades/light" element={<LightShades />} />
-            <Route path="/shades/two-colors" element={<LightShades />} />
+            <Route path="/shades/two-colors" element={<TwoColorsPage />} />
+            <Route path="/shades/multi-shades" element={<TwoColorsPage />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

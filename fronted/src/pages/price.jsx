@@ -13,8 +13,9 @@ const Price = () => {
           <h2>Basic</h2>
           <p className="price">Rs. 259<span>/mo</span></p>
           <ul>
-            <li>✔ 30 Credits</li>
-            <li>✔ Free Ads Support</li>
+            {/* <li>✔ 30 Credits</li> */}
+            {/* <li>✔ Free Ads Support</li> */}
+            <li>✔ two colors shades</li>
             <li>✔ 10 More Shades</li>
             <li>✔ Basic Support</li>
           </ul>
@@ -24,11 +25,11 @@ const Price = () => {
         {/* Pro Plan */}
         <div className="price-card featured">
           <h2>Pro</h2>
-          <p className="price">Rs. 869<span>/mo</span></p>
+          <p className="price">Rs. 969<span>/mo</span></p>
           <ul>
-            <li>✔ 50 Credits</li>
+            {/* <li>✔ 50 Credits</li> */}
             <li>✔ Free Ads Support</li>
-            <li>✔ 100 More Shades</li>
+            <li>✔ 50 More Shades</li>
           </ul>
           <button>Choose Pro</button>
         </div>

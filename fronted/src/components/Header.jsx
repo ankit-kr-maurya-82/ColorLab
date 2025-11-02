@@ -1,17 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styles/Header.css";
 
 const Header = () => {
   return (
-    <div>
-        <h1>SiColor</h1>
-        <nav>
-            <Link to='/'>Home</Link>
-            <Link to='/palette'>palette</Link>
-            <Link to='/gradient'>gradient</Link>
-        </nav>
-    </div>
-  )
-}
+    <header className="header-section">
+      <h1 className="welcome-head">
+        Welcome to <span className="highlight">ColorLab</span>
+      </h1>
 
-export default Header
+      <p className="header-text">
+        Create stunning color palettes with ease. Generate, lock, and copy colors — 
+        all in one place. Press <span className="key">Space</span> to randomize your palette!
+      </p>
+
+      <Link to="/shades" className="header-btn">
+        🎨 Generate New Palette
+      </Link>
+    </header>
+  );
+};
+
+export default Header;
