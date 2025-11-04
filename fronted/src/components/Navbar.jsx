@@ -1,61 +1,59 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./styles/Navbar.css"; // External CSS file
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between   items-center px-8 py-4 bg-white shadow-md fixed w-full z-40">
+    <nav className="navbar">
       {/* Logo */}
-      <h1 className="text-xl font-bold text-blue-600">🎨 ColorLab</h1>
+      <h1 className="logo">🎨 ColorLab</h1>
+
+      {/* Hamburger menu (for mobile) */}
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
 
       {/* Navigation Links */}
-      <div className="flex gap-6 text-gray-600 font-medium relative">
-        <Link to="/">Palettes</Link>
-        <Link to="/gradients">Gradients</Link>
+      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          Palettes
+        </Link>
+        <Link to="/gradients" onClick={() => setMenuOpen(false)}>
+          Gradients
+        </Link>
 
         {/* Dropdown for Shades */}
         <div
-          className="relative"
+          className="dropdown"
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
-          <button className="hover:text-blue-600 transition flex items-center gap-1">
+          <button className="dropdown-btn">
             Shades ▾
           </button>
 
           {isDropdownOpen && (
-            <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-              <Link
-                to="/shades/dark"
-                className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-              >
-                Dark Shades
-              </Link>
-              <Link
-                to="/shades/light"
-                className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-              >
-                Light Shades
-              </Link>
-              <Link
-                to="/shades/two-colors"
-                className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-              >
-                Two-Color Shades
-              </Link>
-              <Link
-                to="/shades/multi-shades"
-                className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-              >
-                Multi Shades
-              </Link>
+            <div className="dropdown-menu">
+              <Link to="/shades/dark">Dark Shades</Link>
+              <Link to="/shades/light">Light Shades</Link>
+              <Link to="/shades/two-colors">Two-Color Shades</Link>
+              <Link to="/shades/multi-shades">Multi Shades</Link>
             </div>
           )}
         </div>
 
-        <Link to="/price">Price</Link>
-        <Link to="/about">About</Link>
+        <Link to="/price" onClick={() => setMenuOpen(false)}>
+          Price
+        </Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>
+          About
+        </Link>
       </div>
     </nav>
   );
