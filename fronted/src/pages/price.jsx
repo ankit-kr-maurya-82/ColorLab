@@ -11,7 +11,7 @@ const Price = () => {
         {/* Basic Plan */}
         <div className="price-card">
           <h2>Basic</h2>
-          <p className="price">Rs. 259<span>/mo</span></p>
+          <p className="price">Rs. 159<span>/mo</span></p>
           <ul>
             {/* <li>✔ 30 Credits</li> */}
             {/* <li>✔ Free Ads Support</li> */}
@@ -25,7 +25,7 @@ const Price = () => {
         {/* Pro Plan */}
         <div className="price-card featured">
           <h2>Pro</h2>
-          <p className="price">Rs. 969<span>/mo</span></p>
+          <p className="price">Rs. 3  69<span>/mo</span></p>
           <ul>
             {/* <li>✔ 50 Credits</li> */}
             <li>✔ Free Ads Support</li>
