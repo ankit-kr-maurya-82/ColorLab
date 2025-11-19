@@ -1,6 +1,7 @@
+// Navbar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles/Navbar.css"; // External CSS file
+import "./styles/Navbar.css";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -8,52 +9,73 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
-      <h1 className="logo">🎨 ColorLab</h1>
-
-      {/* Hamburger menu (for mobile) */}
-      <button
-        className="menu-toggle"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </button>
-
-      {/* Navigation Links */}
-      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-        <Link to="/" onClick={() => setMenuOpen(false)}>
-          Palettes
-        </Link>
-        <Link to="/gradients" onClick={() => setMenuOpen(false)}>
-          Gradients
+      <div className="navbar-container">
+        {/* Logo */}
+        <Link to="/" className="logo">
+          <span className="logo-emoji">🎨</span>
+          <span className="logo-text">ColorLab</span>
         </Link>
 
-        {/* Dropdown for Shades */}
-        <div
-          className="dropdown"
-          onMouseEnter={() => setIsDropdownOpen(true)}
-          onMouseLeave={() => setIsDropdownOpen(false)}
+        {/* Hamburger menu (for mobile) */}
+        <button
+          className={`menu-toggle ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
         >
-          <button className="dropdown-btn">
-            Shades ▾
-          </button>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
 
-          {isDropdownOpen && (
-            <div className="dropdown-menu">
-              <Link to="/shades/dark">Dark Shades</Link>
-              <Link to="/shades/light">Light Shades</Link>
-              <Link to="/shades/two-colors">Two-Color Shades</Link>
-              <Link to="/shades/multi-shades">Multi Shades</Link>
+        {/* Navigation Links */}
+        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Palettes
+          </Link>
+          
+          <Link to="/gradients" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Gradients
+          </Link>
+
+          {/* Dropdown for Shades */}
+          <div
+            className="dropdown"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button className="dropdown-btn nav-link">
+              Shades
+              <span className={`dropdown-arrow ${isDropdownOpen ? "active" : ""}`}>▾</span>
+            </button>
+
+            <div className={`dropdown-menu ${isDropdownOpen ? "active" : ""}`}>
+              <Link to="/shades/dark" className="dropdown-item" onClick={() => setMenuOpen(false)}>
+                <span className="dropdown-icon">🌑</span>
+                Dark Shades
+              </Link>
+              <Link to="/shades/light" className="dropdown-item" onClick={() => setMenuOpen(false)}>
+                <span className="dropdown-icon">☀️</span>
+                Light Shades
+              </Link>
+              <Link to="/shades/two-colors" className="dropdown-item" onClick={() => setMenuOpen(false)}>
+                <span className="dropdown-icon">🎭</span>
+                Two-Color Shades
+              </Link>
+              <Link to="/shades/multi-shades" className="dropdown-item" onClick={() => setMenuOpen(false)}>
+                <span className="dropdown-icon">🌈</span>
+                Multi Shades
+              </Link>
             </div>
-          )}
-        </div>
+          </div>
 
-        <Link to="/price" onClick={() => setMenuOpen(false)}>
-          Price
-        </Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>
-          About
-        </Link>
+          <Link to="/price" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Price
+          </Link>
+          
+          <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
+        </div>
       </div>
     </nav>
   );
